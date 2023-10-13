@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+.MuiContainer-root {
+  padding: 0;
+}
+.css-6iz4mj-MuiButtonBase-root-MuiIconButton-root svg {
+  color: black;
+}
+.body-container {
+  height: 100vh;
+}
+.logout {
+  bottom: 0px;
+  position: absolute;
+}
+
+.logout_name {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+.logout span {
+  font-size: 13px;
+}
+.logout svg {
+  margin-left: 20px;
+}
+
+.card-overall-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card-container {
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  padding: 15px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.card-icon {
+  padding: 20px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+}
+.card-icon svg {
+  height: 50px;
+  width: 50px;
+}
+.card-title,
+.card-percent {
+  font-size: 10px !important;
+}
+.card-money {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+}
+.card-percent {
+  font-weight: 800 !important;
+}
+.card-period {
+  font-weight: normal;
+}
