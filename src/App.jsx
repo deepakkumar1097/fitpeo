@@ -9,6 +9,8 @@ import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import "./styles/style.css";
 import Card from "./components/Card";
+import MonthChart from "./components/MonthChart";
+import CustomerChart from "./components/CustomerChart";
 
 function App() {
   const theme = React.useMemo(
@@ -38,7 +40,7 @@ function App() {
         },
         typography: {
           fontFamily: "Poppins",
-          fontSize: 14,
+          fontSize: "14px",
           fontWeightLight: 300,
           fontWeightBold: 700,
         },
@@ -109,6 +111,10 @@ function App() {
               iconColor="purple"
               iconBgColor="#ffaed7"
             />
+          </div>
+          <div className="chart-container">
+            <MonthChart />
+            <CustomerChart />
           </div>
         </MiniDrawer>
       </Container>

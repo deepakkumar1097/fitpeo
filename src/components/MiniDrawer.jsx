@@ -89,12 +89,26 @@ export default function ResponsiveDrawer({ children }) {
 
   const drawer = (
     <div>
-      <Toolbar sx={{ justifyContent: "space-between" }}>
-        <DashboardIcon sx={{ marginLeft: "-5px" }} />
-        <Typography sx={{ marginRight: "55px" }}>Dashboard</Typography>
+      <Toolbar
+        // sx={{ justifyContent: "space-between" }}
+        style={{ fontSize: theme.typography.fontSize }}
+        sx={{ padding: "0px" }}
+      >
+        {/* <DashboardIcon sx={{ marginLeft: "-7px" }} />
+        <Typography sx={{ marginRight: "65px" }}>Dashboard</Typography> */}
+        <List>
+          <ListItem sx={{ padding: "0px" }}>
+            <ListItemButton>
+              <ListItemIcon>
+                <DashboardIcon sx={{ color: "white" }} />
+              </ListItemIcon>
+              <ListItemText>Dashboard</ListItemText>
+            </ListItemButton>
+          </ListItem>
+        </List>
       </Toolbar>
       <Divider />
-      <List>
+      <List style={{ fontSize: theme.typography.fontSize }}>
         {["Product", "Customer", "Income", "Promote", "Help"].map(
           (text, index) => (
             <ListItem key={text} disablePadding>
@@ -111,7 +125,7 @@ export default function ResponsiveDrawer({ children }) {
         )}
       </List>
       <div className="logout">
-        <List>
+        <List style={{ fontSize: theme.typography.fontSize }}>
           <ListItemButton>
             <ListItemIcon sx={{ color: "white" }}>
               <Avatar src="https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38="></Avatar>
@@ -155,10 +169,14 @@ export default function ResponsiveDrawer({ children }) {
             noWrap
             component="div"
             sx={{ color: "black" }}
+            style={{ fontSize: theme.typography.fontSize }}
           >
             Hello Shahruhk👋🏻,
           </Typography>
-          <Search sx={{ backgroundColor: "white", color: "black" }}>
+          <Search
+            sx={{ backgroundColor: "white", color: "black" }}
+            style={{ fontSize: theme.typography.fontSize }}
+          >
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
