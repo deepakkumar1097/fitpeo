@@ -38,13 +38,6 @@ body {
   margin-left: 20px;
 }
 
-/* .card-overall-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
-} */
-
 .card-container {
   background-color: rgb(255, 255, 255);
   width: 250px;
@@ -80,12 +73,6 @@ body {
 .card-period {
   font-weight: normal;
 }
-/* .chart-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 30px;
-} */
 
 .monthChart-title {
   width: 100%;
@@ -108,9 +95,9 @@ body {
   padding: 24px 0 !important;
 }
 .monthChart-container {
+  max-width: 300px;
   display: flex;
   flex-wrap: wrap;
-  /* gap: 20px; */
   flex-direction: column;
   background-color: white;
   border-radius: 7px;
@@ -118,11 +105,15 @@ body {
 }
 
 .customer-container {
+  max-width: 300px;
   background-color: white;
   border-radius: 7px;
   padding: 20px 5px;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .css-12n0uxm-MuiGrid-root > .MuiGrid-item {
+    margin-left: 50px;
+  }
 }
 @media screen and (max-width: 768px) {
   /* .card-overall-container {
@@ -143,13 +134,30 @@ body {
   } */
 }
 @media screen and (min-width: 600px) and (max-width: 821px) {
-  /* .card-overall-container {
-    justify-content: center;
-  } */
+  .css-12n0uxm-MuiGrid-root > .MuiGrid-item {
+    margin-left: 50px;
+  }
 }
 @media (min-width: 600px) {
   .css-1fpo0vu-MuiToolbar-root {
     padding-left: 0px !important;
     padding-right: 0px !important;
+  }
+  .all-chart-container {
+    flex-direction: row !important;
+  }
+  .monthChart-container,
+  .customer-container {
+    max-width: 100% !important;
+  }
+  .customer-container {
+    padding: 5px !important;
+  }
+  .card-container {
+    height: fit-content !important;
+  }
+  .doughnut-chart,
+  .bar-chart {
+    width: 100% !important;
   }
 }

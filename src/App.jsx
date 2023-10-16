@@ -70,6 +70,7 @@ function App() {
             className="chart-container"
             spacing={2}
             justifyContent={"center"}
+            alignItems={"center"}
           >
             <Grid item sm={12} md={6} lg={3}>
               <Card
@@ -128,11 +129,19 @@ function App() {
               />
             </Grid>
           </Grid>
-          <Grid container spacing={2} mt={1}>
-            <Grid item xs={12} lg={8}>
+          <Grid
+            container
+            spacing={2}
+            mt={1}
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexDirection={"column"}
+            className="all-chart-container"
+          >
+            <Grid item xs={12} md={8} p={2} className="month-container">
               <MonthChart />
             </Grid>
-            <Grid item xs={12} lg={4}>
+            <Grid item xs={12} md={4} p={2} className="customer-container">
               <CustomerChart />
             </Grid>
           </Grid>

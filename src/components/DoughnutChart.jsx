@@ -44,7 +44,8 @@ function DoughnutChart() {
         data={data}
         options={options}
         plugins={plugins}
-        style={{ width: "auto", height: "300px" }}
+        style={{ width: "280px", height: "300px" }}
+        className="doughnut-chart"
       />
     </div>
   );

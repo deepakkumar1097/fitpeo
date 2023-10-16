@@ -65,7 +65,8 @@ export default function ChartComponent() {
       <Bar
         options={options}
         data={data}
-        style={{ width: "auto", height: "300px" }}
+        style={{ width: "280px", height: "300px" }}
+        className="bar-chart"
       />
     </div>
   );
