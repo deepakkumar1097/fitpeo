@@ -61,8 +61,12 @@ export const data = {
 
 export default function ChartComponent() {
   return (
-    <div id="canvas-container">
-      <Bar options={options} data={data} />
+    <div>
+      <Bar
+        options={options}
+        data={data}
+        style={{ width: "auto", height: "300px" }}
+      />
     </div>
   );
 }

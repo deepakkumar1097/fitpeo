@@ -5,6 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import ChartComponent from "./ChartComponent";
+import { Grid } from "@mui/material";
 
 function MonthChart() {
   const [age, setAge] = React.useState("");

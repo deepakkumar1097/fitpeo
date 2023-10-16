@@ -11,6 +11,7 @@ import "./styles/style.css";
 import Card from "./components/Card";
 import MonthChart from "./components/MonthChart";
 import CustomerChart from "./components/CustomerChart";
+import { Grid } from "@mui/material";
 
 function App() {
   const theme = React.useMemo(
@@ -59,63 +60,82 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="xl" sx={{ backgroundColor: "#e4e7ed" }}>
+      <Container
+        maxWidth="xl"
+        sx={{ backgroundColor: "#e4e7ed", height: "100vh" }}
+      >
         <MiniDrawer>
-          <div className="card-overall-container">
-            <Card
-              title="Earning"
-              money="$198k"
-              percent="37.8%"
-              period="this month"
-              icon={MonetizationOnIcon}
-              fontColor="black" // Custom font color
-              percentColor="#05a138"
-              periodTextColor="black"
-              iconColor="#00a94a"
-              iconBgColor="rgb(223, 255, 244)"
-            />
-
-            <Card
-              title="Orders"
-              money="$2.4k"
-              percent="2%"
-              period="this month"
-              icon={AccountBalanceWalletIcon}
-              fontColor="black" // Custom font color
-              percentColor="#d82e6a"
-              periodTextColor="black"
-              iconColor="#a714fe"
-              iconBgColor="#e7dbff"
-            />
-            <Card
-              title="Balance"
-              money="$2.4k"
-              percent="2%"
-              period="this month"
-              icon={AccountBalanceIcon}
-              fontColor="black" // Custom font color
-              percentColor="#d82e6a"
-              periodTextColor="black"
-              iconColor="#0a5bc0"
-              iconBgColor="#cdf3ff"
-            />
-            <Card
-              title=" Total Sales"
-              money="$89k"
-              percent="11%"
-              period="this week"
-              icon={ShoppingBasketIcon}
-              fontColor="black" // Custom font color
-              percentColor="#05a138"
-              periodTextColor="black"
-              iconColor="purple"
-              iconBgColor="#ffaed7"
-            />
-          </div>
-          <div className="chart-container">
-            <MonthChart />
-            <CustomerChart />
-          </div>
+          <Grid
+            container
+            className="chart-container"
+            spacing={2}
+            justifyContent={"center"}
+          >
+            <Grid item sm={12} md={6} lg={3}>
+              <Card
+                title="Earning"
+                money="$198k"
+                percent="37.8%"
+                period="this month"
+                icon={MonetizationOnIcon}
+                fontColor="black" // Custom font color
+                percentColor="#05a138"
+                periodTextColor="black"
+                iconColor="#00a94a"
+                iconBgColor="rgb(223, 255, 244)"
+              />
+            </Grid>
+            <Grid item sm={12} md={6} lg={3}>
+              <Card
+                title="Orders"
+                money="$2.4k"
+                percent="2%"
+                period="this month"
+                icon={AccountBalanceWalletIcon}
+                fontColor="black" // Custom font color
+                percentColor="#d82e6a"
+                periodTextColor="black"
+                iconColor="#a714fe"
+                iconBgColor="#e7dbff"
+              />
+            </Grid>
+            <Grid item sm={12} md={6} lg={3}>
+              <Card
+                title="Balance"
+                money="$2.4k"
+                percent="2%"
+                period="this month"
+                icon={AccountBalanceIcon}
+                fontColor="black" // Custom font color
+                percentColor="#d82e6a"
+                periodTextColor="black"
+                iconColor="#0a5bc0"
+                iconBgColor="#cdf3ff"
+              />
+            </Grid>
+            <Grid item sm={12} md={6} lg={3}>
+              <Card
+                title=" Total Sales"
+                money="$89k"
+                percent="11%"
+                period="this week"
+                icon={ShoppingBasketIcon}
+                fontColor="black" // Custom font color
+                percentColor="#05a138"
+                periodTextColor="black"
+                iconColor="purple"
+                iconBgColor="#ffaed7"
+              />
+            </Grid>
+          </Grid>
+          <Grid container spacing={2} mt={1}>
+            <Grid item xs={12} lg={8}>
+              <MonthChart />
+            </Grid>
+            <Grid item xs={12} lg={4}>
+              <CustomerChart />
+            </Grid>
+          </Grid>
         </MiniDrawer>
       </Container>
     </ThemeProvider>
