@@ -12,6 +12,7 @@ import Card from "./components/Card";
 import MonthChart from "./components/MonthChart";
 import CustomerChart from "./components/CustomerChart";
 import { Grid } from "@mui/material";
+import ProductSell from "./components/ProductSell";
 
 function App() {
   const theme = React.useMemo(
@@ -143,6 +144,18 @@ function App() {
             </Grid>
             <Grid item xs={12} md={4} p={2} className="customer-container">
               <CustomerChart />
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            spacing={2}
+            mt={1}
+            justifyContent={"center"}
+            alignItems={"center"}
+            className="product-sell-container"
+          >
+            <Grid item xs={12}>
+              <ProductSell />
             </Grid>
           </Grid>
         </MiniDrawer>
